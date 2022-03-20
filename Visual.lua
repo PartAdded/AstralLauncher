@@ -47,3 +47,5 @@ local function spineffect()
        UIGradient_2.Rotation = UIGradient_2.Rotation + 1
    until true == false
 end
+
+spineffect()
