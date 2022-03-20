@@ -48,4 +48,4 @@ local function spineffect()
    until true == false
 end
 
-spineffect()
+coroutine.wrap(spineffect)()
