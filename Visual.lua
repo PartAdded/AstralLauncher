@@ -1,15 +1,8 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local Visual = Instance.new("ScreenGui")
 local TextLabel = Instance.new("TextLabel")
 local UIGradient = Instance.new("UIGradient")
 local TextLabel_2 = Instance.new("TextLabel")
 local UIGradient_2 = Instance.new("UIGradient")
-
---Properties:
 
 Visual.Name = "Visual"
 Visual.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -46,3 +39,11 @@ TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
 
 UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 0, 255)), ColorSequenceKeypoint.new(0.12, Color3.fromRGB(175, 194, 255)), ColorSequenceKeypoint.new(0.23, Color3.fromRGB(85, 0, 255)), ColorSequenceKeypoint.new(0.36, Color3.fromRGB(175, 194, 255)), ColorSequenceKeypoint.new(0.48, Color3.fromRGB(64, 0, 255)), ColorSequenceKeypoint.new(0.60, Color3.fromRGB(175, 194, 255)), ColorSequenceKeypoint.new(0.72, Color3.fromRGB(200, 0, 255)), ColorSequenceKeypoint.new(0.80, Color3.fromRGB(175, 194, 255)), ColorSequenceKeypoint.new(0.88, Color3.fromRGB(0, 34, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(175, 194, 255))}
 UIGradient_2.Parent = TextLabel_2
+
+local function spineffect()
+   repeat
+       task.wait()
+       UIGradient.Rotation = UIGradient.Rotation + 1
+       UIGradient_2.Rotation = UIGradient_2.Rotation + 1
+   until true == false
+end
